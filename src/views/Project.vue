@@ -7,31 +7,35 @@
       <h5 class="text-muted text-center" data-aos="fade-down">
         Project based on Github Api
       </h5>
-      <div class="row justify-content-center mt-4">
-        <div
-          class="col-12 col-md-12 col-lg-6 mt-4"
-          data-aos="fade-up"
-          v-for="({ name, desc, url, lang }, i) of arrRepos"
-          :key="i"
-        >
-          <div class="project-box">
-            <h4>{{ name }} ({{ lang }})</h4>
-            <h6 class="text-muted">{{ desc }}</h6>
-            <a
-              :href="url"
-              class="btn btn-secondary btn-block shadow-none"
-              target="_blank"
-              >Visit</a
-            >
+      <container-project>
+        <div class="row justify-content-center mt-4">
+          <div
+            class="col-12 col-md-12 col-lg-6 mt-4"
+            data-aos="fade-up"
+            v-for="({ name, desc, url, lang }, i) of arrRepos"
+            :key="i"
+          >
+            <div class="project-box">
+              <h4>{{ name }} ({{ lang }})</h4>
+              <h6 class="text-muted">{{ desc }}</h6>
+              <a
+                :href="url"
+                class="btn btn-secondary btn-block shadow-none"
+                target="_blank"
+                >Visit</a
+              >
+            </div>
           </div>
         </div>
-      </div>
+      </container-project>
     </div>
     <Footer />
   </div>
 </template>
 
 <script>
+import CtProject from "../components/Home/CtProject.vue";
+
 export default {
   data: () => ({
     arrRepos: [],
@@ -66,6 +70,9 @@ export default {
         .then((res) => res.json())
         .then((res) => res);
     },
+  },
+  components: {
+    "container-project": CtProject,
   },
 };
 </script>

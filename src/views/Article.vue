@@ -3,30 +3,32 @@
     <div class="container mb-5">
       <div class="article-content">
         <h1 class="judul text-center" data-aos="fade-down">Dev.to Post</h1>
-        <div class="row justify-content-center">
-          <div
-            class="col-12 col-md-12 col-lg-6"
-            v-for="({ title, img, date, user, tag, url }, i) of arrArtikel"
-            :key="i"
-            data-aos="fade-up"
-          >
-            <div class="article-box mt-3">
-              <img :src="img" class="w-100 mb-3 rounded" />
-              <h4>
-                {{ title }}
-              </h4>
-              <h6 class="text-muted">{{ user }} ({{ date }})</h6>
-              <h6 class="text-muted">Tag: ({{ tag }})</h6>
-              <a
-                class="btn btn-secondary btn-block btn-sm shadow-none"
-                :href="url"
-                target="_blank"
-              >
-                Visit
-              </a>
+        <container-article>
+          <div class="row justify-content-center">
+            <div
+              class="col-12 col-md-12 col-lg-6"
+              v-for="({ title, img, date, user, tag, url }, i) of arrArtikel"
+              :key="i"
+              data-aos="fade-up"
+            >
+              <div class="article-box mt-3">
+                <img :src="img" class="w-100 mb-3 rounded" />
+                <h4>
+                  {{ title }}
+                </h4>
+                <h6 class="text-muted">{{ user }} ({{ date }})</h6>
+                <h6 class="text-muted">Tag: ({{ tag }})</h6>
+                <a
+                  class="btn btn-secondary btn-block btn-sm shadow-none"
+                  :href="url"
+                  target="_blank"
+                >
+                  Visit
+                </a>
+              </div>
             </div>
           </div>
-        </div>
+        </container-article>
       </div>
     </div>
     <Footer />
@@ -34,6 +36,8 @@
 </template>
 
 <script>
+import CtProject from "../components/Home/CtProject.vue";
+
 export default {
   data: () => ({
     scriptURL: "https://dev.to/api/articles?username=dimasngoding",
@@ -58,6 +62,9 @@ export default {
         .then((res) => res.json())
         .then((res) => res);
     },
+  },
+  components: {
+    "container-article": CtProject,
   },
 };
 </script>
