@@ -4,11 +4,20 @@
       <router-link class="navbar-brand" to="/">@dimas-ngoding</router-link>
       <toggle-button></toggle-button>
       <navbar-collapse>
-        <a class="nav-link active" href="#"
-          >Home <span class="sr-only">(current)</span></a
+        <router-link
+          to="/"
+          data-toggle="collapse"
+          data-target=".navbar-collapse.show"
+          class="nav-link"
+          >Home</router-link
         >
-        <a class="nav-link" href="#">About</a>
-        <a class="nav-link" href="#">Article</a>
+        <router-link
+          data-toggle="collapse"
+          data-target=".navbar-collapse.show"
+          class="nav-link"
+          to="/article"
+          >Article</router-link
+        >
         <a class="nav-link" href="#">Contact</a>
       </navbar-collapse>
     </div>
@@ -28,6 +37,9 @@ export default {
 </script>
 
 <style lang="scss">
+.router-link-active {
+  color: #fff !important;
+}
 .navbar {
   border-bottom: 1px solid #35353d;
   .navbar-brand {

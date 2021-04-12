@@ -3,6 +3,7 @@
     <div class="container mb-5">
       <AboutMe />
       <GithubStats />
+      <SkillSet />
     </div>
     <Footer />
   </div>
@@ -11,12 +12,14 @@
 <script>
 import AboutMe from "../components/Home/AboutMe.vue";
 import GithubStats from "../components/Home/GithubStats.vue";
+import SkillSet from "../components/Home/SkillSet.vue";
 
 export default {
   name: "Home",
   components: {
     AboutMe,
     GithubStats,
+    SkillSet,
   },
 };
 </script>
@@ -25,6 +28,15 @@ export default {
 .home {
   h1 {
     font-weight: 600;
+  }
+  .skill-set {
+    .list-item-skill {
+      text-align: center !important;
+    }
+    margin-top: 80px;
+    .skillset-title {
+      font-weight: 600;
+    }
   }
   .github-stats {
     .gt-2 {
@@ -57,6 +69,17 @@ export default {
   }
   .gt-stats-aja {
     width: 100% !important;
+  }
+  .skill-set {
+    .list-item-skill {
+      h5,
+      p {
+        text-align: left !important;
+      }
+    }
+    .skillset-title {
+      text-align: left !important;
+    }
   }
 }
 </style>
