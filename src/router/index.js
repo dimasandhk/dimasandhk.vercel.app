@@ -20,6 +20,11 @@ const routes = [
     name: "Contact",
     component: Contact,
   },
+  {
+    path: "/project",
+    name: "Project",
+    component: Project,
+  },
 ];
 
 const router = createRouter({

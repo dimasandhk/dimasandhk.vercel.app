@@ -25,6 +25,13 @@
           to="/contact"
           >Contact</router-link
         >
+        <router-link
+          data-toggle="collapse"
+          data-target=".navbar-collapse.show"
+          class="nav-link"
+          to="/project"
+          >Project</router-link
+        >
       </navbar-collapse>
     </div>
   </nav>
