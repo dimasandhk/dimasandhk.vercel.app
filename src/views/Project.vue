@@ -46,6 +46,9 @@ export default {
     arrRepos: [],
     id: 0,
   }),
+  // beforeCreate() {
+  //   document.querySelector(".loading-f").classList.toggle("d-none");
+  // },
   created: async function() {
     const data = await this.getDataRepos();
     data.forEach((el) => {
@@ -68,15 +71,13 @@ export default {
         });
       }
     });
+    document.querySelector(".loading-f").classList.toggle("d-none");
   },
   methods: {
     getDataRepos() {
       return fetch("https://api.github.com/users/Dimas-Ngoding/repos")
         .then((res) => res.json())
-        .then((res) => res)
-        .finally(() => {
-          document.querySelector(".loading-f").classList.toggle("d-none");
-        });
+        .then((res) => res);
     },
   },
   components: {

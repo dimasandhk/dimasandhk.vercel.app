@@ -60,15 +60,13 @@ export default {
         url: el.url,
       });
     });
+    document.querySelector(".loading-f").classList.toggle("d-none");
   },
   methods: {
     getDataArtikel: function() {
       return fetch(this.scriptURL)
         .then((res) => res.json())
-        .then((res) => res)
-        .finally(() => {
-          document.querySelector(".loading-f").classList.toggle("d-none");
-        });
+        .then((res) => res);
     },
   },
   components: {

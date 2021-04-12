@@ -4,10 +4,9 @@
       <div class="col-12">
         <h1 data-aos="fade-up" class="name-me">Github Stats</h1>
       </div>
-      <div class="col-12">
+      <div class="col-11 col-md-12 col-lg-12">
         <h6 data-aos="fade-up">
-          My Github stats based on
-          https://github.com/anuraghazra/github-readme-stats
+          My Github stats based on github.com/anuraghazra/github-readme-stats
         </h6>
       </div>
       <div class="col-12 col-md-12 col-lg-12">
