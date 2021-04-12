@@ -3,7 +3,10 @@
 $main: #16161d;
 $secondary: #1affd6;
 
+html,
 body {
+  max-width: 100%;
+  overflow-x: hidden;
   color: #fff;
   background-color: $main;
 }

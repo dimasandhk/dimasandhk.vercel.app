@@ -17,7 +17,8 @@
               class="col-12 col-md-12 col-lg-6"
               v-for="({ title, img, date, user, tag, url }, i) of arrArtikel"
               :key="i"
-              data-aos="fade-up"
+              :data-aos="i % 2 == 0 ? 'flip-left' : 'flip-right'"
+              data-aos-duration="1500"
             >
               <div class="article-box mt-3">
                 <img :src="img" class="w-100 mb-3 rounded" />

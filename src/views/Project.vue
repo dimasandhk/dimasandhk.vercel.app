@@ -19,9 +19,10 @@
         <div class="row justify-content-center mt-4">
           <div
             class="col-12 col-md-12 col-lg-6 mt-4"
-            data-aos="fade-up"
             v-for="({ name, desc, url, lang }, i) of arrRepos"
             :key="i"
+            :data-aos="i % 2 == 0 ? 'fade-right' : 'fade-left'"
+            data-aos-duration="1000"
           >
             <div class="project-box">
               <h4>{{ name }} ({{ lang }})</h4>

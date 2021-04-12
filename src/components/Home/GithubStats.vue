@@ -13,12 +13,13 @@
         <img
           src="https://metrics.lecoq.io/dimas-ngoding"
           class="mt-2 gt-stats-aja"
-          data-aos="fade-up"
+          data-aos="zoom-out"
         />
       </div>
       <div class="col-12 col-md-12 col-lg-12">
         <img
-          data-aos="fade-up"
+          data-aos="flip-left"
+          data-aos-duration="1000"
           class="gt-stats-1 mt-3"
           src="https://github-readme-stats.vercel.app/api?username=dimas-ngoding&show_icons=true&include_all_commits=true&count_private=true&theme=gotham"
           alt="dimas-ngoding"
@@ -26,7 +27,9 @@
       </div>
       <div class="col-12 col-md-12 col-lg-12">
         <img
-          data-aos="fade-up"
+          data-aos="flip-right"
+          data-aos-duration="1000"
+          data-aos-delay="100"
           class="gt-stats-1 gt-2 mt-3"
           src="https://github-readme-stats.vercel.app/api/top-langs/?username=dimas-ngoding&layout=compact&show_icons=true&theme=gotham&langs_count=10&https://github.com/dimas-ngoding/github-readme-stats"
           alt="dimas-ngoding"
