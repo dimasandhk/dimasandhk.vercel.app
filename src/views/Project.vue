@@ -7,6 +7,11 @@
       <h5 class="text-muted text-center" data-aos="fade-down">
         Project based on Github Api
       </h5>
+      <div class="row justify-content-center loading-f">
+        <div class="spinner-border text-center" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
       <container-project>
         <div class="row justify-content-center mt-4">
           <div
@@ -68,7 +73,10 @@ export default {
     getDataRepos() {
       return fetch("https://api.github.com/users/Dimas-Ngoding/repos")
         .then((res) => res.json())
-        .then((res) => res);
+        .then((res) => res)
+        .finally(() => {
+          document.querySelector(".loading-f").classList.toggle("d-none");
+        });
     },
   },
   components: {

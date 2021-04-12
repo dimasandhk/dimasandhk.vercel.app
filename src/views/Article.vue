@@ -3,6 +3,11 @@
     <div class="container mb-5">
       <div class="article-content">
         <h1 class="judul text-center" data-aos="fade-down">Dev.to Post</h1>
+        <div class="row justify-content-center loading-f">
+          <div class="spinner-border text-center" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
         <container-article>
           <div class="row justify-content-center">
             <div
@@ -60,7 +65,10 @@ export default {
     getDataArtikel: function() {
       return fetch(this.scriptURL)
         .then((res) => res.json())
-        .then((res) => res);
+        .then((res) => res)
+        .finally(() => {
+          document.querySelector(".loading-f").classList.toggle("d-none");
+        });
     },
   },
   components: {
