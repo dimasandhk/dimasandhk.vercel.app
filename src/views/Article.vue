@@ -3,7 +3,10 @@
     <div class="container mb-5">
       <div class="article-content">
         <h1 class="judul text-center" data-aos="fade-down">Dev.to Post</h1>
-        <div class="row justify-content-center loading-f">
+        <div
+          class="row justify-content-center loading-f"
+          v-show="showLoading == true"
+        >
           <div class="spinner-border text-center" role="status">
             <span class="sr-only">Loading...</span>
           </div>
@@ -47,6 +50,7 @@ export default {
   data: () => ({
     scriptURL: "https://dev.to/api/articles?username=dimasngoding",
     arrArtikel: [],
+    showLoading: true,
   }),
   created: async function() {
     const dataArtikel = await this.getDataArtikel();
@@ -60,7 +64,7 @@ export default {
         url: el.url,
       });
     });
-    document.querySelector(".loading-f").classList.toggle("d-none");
+    this.showLoading = false;
   },
   methods: {
     getDataArtikel: function() {

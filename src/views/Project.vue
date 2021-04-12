@@ -7,7 +7,10 @@
       <h5 class="text-muted text-center" data-aos="fade-down">
         Project based on Github Api
       </h5>
-      <div class="row justify-content-center loading-f">
+      <div
+        class="row justify-content-center loading-f"
+        v-show="showLoading == true"
+      >
         <div class="spinner-border text-center" role="status">
           <span class="sr-only">Loading...</span>
         </div>
@@ -45,6 +48,7 @@ export default {
   data: () => ({
     arrRepos: [],
     id: 0,
+    showLoading: true,
   }),
   // beforeCreate() {
   //   document.querySelector(".loading-f").classList.toggle("d-none");
@@ -71,7 +75,7 @@ export default {
         });
       }
     });
-    document.querySelector(".loading-f").classList.toggle("d-none");
+    this.showLoading = false;
   },
   methods: {
     getDataRepos() {
