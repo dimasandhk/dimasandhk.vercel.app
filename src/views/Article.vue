@@ -11,7 +11,7 @@
             data-aos="fade-up"
           >
             <div class="article-box mt-3">
-              <img :src="img" class="w-100 mb-3" />
+              <img :src="img" class="w-100 mb-3 rounded" />
               <h4>
                 {{ title }}
               </h4>

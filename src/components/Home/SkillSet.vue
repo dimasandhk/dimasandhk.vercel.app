@@ -33,7 +33,7 @@ export default {
       },
       {
         title: "Javascript Framework",
-        ket: "Vue JS",
+        ket: "Vue JS, Nuxt JS (Learning)",
       },
       {
         title: "Server Side",

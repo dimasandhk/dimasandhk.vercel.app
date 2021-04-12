@@ -18,7 +18,13 @@
           to="/article"
           >Article</router-link
         >
-        <a class="nav-link" href="#">Contact</a>
+        <router-link
+          data-toggle="collapse"
+          data-target=".navbar-collapse.show"
+          class="nav-link"
+          to="/contact"
+          >Contact</router-link
+        >
       </navbar-collapse>
     </div>
   </nav>
