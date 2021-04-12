@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap");
+
+$main: #16161d;
+$secondary: #1affd6;
+
+body {
+  color: #fff;
+  background-color: $main;
+}
+
+#app {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+}
