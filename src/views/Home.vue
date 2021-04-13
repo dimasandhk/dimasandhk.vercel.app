@@ -16,6 +16,9 @@ import SkillSet from "../components/Home/SkillSet.vue";
 
 export default {
   name: "Home",
+  beforeCreate() {
+    document.title = "@dimas-ngoding";
+  },
   components: {
     AboutMe,
     GithubStats,

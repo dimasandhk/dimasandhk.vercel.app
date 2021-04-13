@@ -2,15 +2,14 @@
   <div class="article mt-5">
     <div class="container mb-5">
       <div class="article-content">
-        <h1 class="judul text-center" data-aos="fade-down">Dev.to Post</h1>
-        <div
-          class="row justify-content-center loading-f"
-          v-show="showLoading == true"
+        <h1
+          class="judul text-center"
+          data-aos="fade-down"
+          data-aos-duration="700"
         >
-          <div class="spinner-border text-center" role="status">
-            <span class="sr-only">Loading...</span>
-          </div>
-        </div>
+          Dev.to Post
+        </h1>
+        <Loading v-show="showLoading == true" />
         <container-article>
           <div class="row justify-content-center">
             <div
@@ -18,7 +17,7 @@
               v-for="({ title, img, date, user, tag, url, rct },
               i) of arrArtikel"
               :key="i"
-              :data-aos="i % 2 == 0 ? 'flip-left' : 'flip-right'"
+              :data-aos="i % 2 == 0 ? 'fade-up-right' : 'fade-up-left'"
               data-aos-duration="1500"
             >
               <div class="article-box mt-3">
@@ -56,6 +55,9 @@ export default {
     arrArtikel: [],
     showLoading: true,
   }),
+  beforeCreate() {
+    document.title = "Post | @dimas-ngoding";
+  },
   created: async function() {
     const dataArtikel = await this.getDataArtikel();
     dataArtikel.forEach((el) => {

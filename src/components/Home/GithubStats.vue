@@ -2,20 +2,14 @@
   <div class="github-stats">
     <div class="row text-center">
       <div class="col-12">
-        <h1 data-aos="fade-up" class="name-me">Github Stats</h1>
+        <h1 data-aos="fade-up" data-aos-duration="700" class="name-me">
+          Github Stats
+        </h1>
       </div>
       <div class="col-11 col-md-12 col-lg-12">
-        <h6 data-aos="fade-up">
+        <h6 data-aos="fade-up" data-aos-duration="700">
           My Github stats based on github.com/anuraghazra/github-readme-stats
         </h6>
-      </div>
-      <div class="col-12 col-md-12 col-lg-12">
-        <img
-          src="https://metrics.lecoq.io/dimas-ngoding"
-          class="mt-2 gt-stats-aja"
-          data-aos="flip-up"
-          data-aos-duration="1000"
-        />
       </div>
       <div class="col-12 col-md-12 col-lg-12">
         <img
@@ -30,7 +24,6 @@
         <img
           data-aos="flip-right"
           data-aos-duration="1000"
-          data-aos-delay="100"
           class="gt-stats-1 gt-2 mt-3"
           src="https://github-readme-stats.vercel.app/api/top-langs/?username=dimas-ngoding&layout=compact&show_icons=true&theme=gotham&langs_count=10&https://github.com/dimas-ngoding/github-readme-stats"
           alt="dimas-ngoding"
@@ -41,13 +34,7 @@
 </template>
 
 <script>
-export default {
-  created() {
-    console.log(
-      `${(474661888603).toString(29)}@${(6600471.519808).toString(25)}`
-    );
-  },
-};
+export default {};
 </script>
 
 <style lang="scss" scoped></style>

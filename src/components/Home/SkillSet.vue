@@ -1,13 +1,18 @@
 <template>
   <div class="skill-set">
     <div class="container">
-      <h1 class="skillset-title name-me text-center mb-3" data-aos="fade-up">
+      <h1
+        class="skillset-title name-me text-center mb-3"
+        data-aos="fade-up"
+        data-aos-duration="700"
+      >
         Skillset
       </h1>
       <div class="row mt-3">
         <div
           class="col-12 col-md-12 col-lg-12 list-item-skill"
-          data-aos="fade-up"
+          data-aos="fade-right"
+          data-aos-duration="700"
           v-for="(item, i) of arrSkill"
           :key="i"
         >

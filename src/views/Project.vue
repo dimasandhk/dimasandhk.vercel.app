@@ -1,20 +1,21 @@
 <template>
   <div class="project mt-5">
     <div class="container mb-5">
-      <h1 class="judul text-center" data-aos="fade-down">
+      <h1
+        class="judul text-center"
+        data-aos="fade-down"
+        data-aos-duration="700"
+      >
         Project
       </h1>
-      <h5 class="text-muted text-center" data-aos="fade-down">
+      <h5
+        class="text-muted text-center"
+        data-aos="fade-down"
+        data-aos-duration="700"
+      >
         Project based on Github Api
       </h5>
-      <div
-        class="row justify-content-center loading-f"
-        v-show="showLoading == true"
-      >
-        <div class="spinner-border text-center" role="status">
-          <span class="sr-only">Loading...</span>
-        </div>
-      </div>
+      <Loading v-show="showLoading == true" />
       <container-project>
         <div class="row justify-content-center mt-4">
           <div
@@ -55,9 +56,9 @@ export default {
     id: 0,
     showLoading: true,
   }),
-  // beforeCreate() {
-  //   document.querySelector(".loading-f").classList.toggle("d-none");
-  // },
+  beforeCreate() {
+    document.title = "Project | @dimas-ngoding";
+  },
   created: async function() {
     const data = await this.getDataRepos();
     data.forEach((el) => {
