@@ -33,6 +33,11 @@
 
 <script>
 import ContactButton from "../components/Home/CtButton.vue";
+import Github from "../components/Svg/Github.vue";
+import Yt from "../components/Svg/Yt.vue";
+import Ig from "../components/Svg/Ig.vue";
+import Email from "../components/Svg/Email.vue";
+import Discord from "../components/Svg/Discord.vue";
 
 export default {
   data: () => ({
@@ -41,31 +46,37 @@ export default {
         title: "Github",
         path: "https://github.com/Dimas-Ngoding",
         ket: "Programming stuff and side projects, old and new",
+        com: Github,
       },
       {
         title: "Youtube",
         path: "https://www.youtube.com/channel/UCNqSlVr9_fJ-682ILT-MBHA",
         ket: "Mostly Timelapse Documentation Video",
+        com: Yt,
       },
       {
         title: "Instagram",
         path: "https://www.instagram.com/dimas.ngoding/",
         ket: "Just an account to share the screenshot of my code",
+        com: Ig,
       },
       {
         title: "Email",
         path: "https://github.com/Dimas-Ngoding",
         ket: "Only when essential",
+        com: Email,
       },
       {
         title: "Discord",
         path: "https://discordapp.com/users/458863525516017664/",
         ket: "Idk, i'm not so active on discord",
+        com: Discord,
       },
       {
         title: "Dev.to",
         path: "https://dev.to/dimasngoding",
         ket: "Where i share articles about programming",
+        com: "Null",
       },
     ],
   }),
