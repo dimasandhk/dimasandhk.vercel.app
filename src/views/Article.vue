@@ -15,7 +15,8 @@
           <div class="row justify-content-center">
             <div
               class="col-12 col-md-12 col-lg-6"
-              v-for="({ title, img, date, user, tag, url }, i) of arrArtikel"
+              v-for="({ title, img, date, user, tag, url, rct },
+              i) of arrArtikel"
               :key="i"
               :data-aos="i % 2 == 0 ? 'flip-left' : 'flip-right'"
               data-aos-duration="1500"
@@ -27,6 +28,7 @@
                 </h4>
                 <h6 class="text-muted">{{ user }} ({{ date }})</h6>
                 <h6 class="text-muted">Tag: ({{ tag }})</h6>
+                <h6 class="text-muted">Reactions: {{ rct }} <Star /></h6>
                 <a
                   class="btn btn-secondary btn-block btn-sm shadow-none"
                   :href="url"
@@ -45,6 +47,7 @@
 </template>
 
 <script>
+import Star from "../components/Svg/Star.vue";
 import CtProject from "../components/Home/CtProject.vue";
 
 export default {
@@ -63,6 +66,7 @@ export default {
         user: el.user.name,
         tag: el.tags,
         url: el.url,
+        rct: el.public_reactions_count,
       });
     });
     this.showLoading = false;
@@ -76,6 +80,7 @@ export default {
   },
   components: {
     "container-article": CtProject,
+    Star,
   },
 };
 </script>

@@ -5,7 +5,7 @@
       <div class="col-12 col-md-10 col-lg-8" data-aos="fade-up">
         <h5>
           I am just a 14 years old student who is interested in and has a hobby
-          in programming, recently I'm learning Vue JS and Node JS. All of my
+          in programming, currently I'm learning Vue JS and Node JS. All of my
           repo in github are just an implementation of what I have learned so
           far.
         </h5>

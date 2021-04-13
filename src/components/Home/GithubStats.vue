@@ -13,7 +13,8 @@
         <img
           src="https://metrics.lecoq.io/dimas-ngoding"
           class="mt-2 gt-stats-aja"
-          data-aos="zoom-out"
+          data-aos="flip-up"
+          data-aos-duration="1000"
         />
       </div>
       <div class="col-12 col-md-12 col-lg-12">

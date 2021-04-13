@@ -1,12 +1,19 @@
 <template>
   <hr />
-  <footer class="text-center mb-3">
+  <footer class="text-center" :class="margin">
     Code licensed under the MIT License
   </footer>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    margin: {
+      type: String,
+      default: "mb-3",
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
