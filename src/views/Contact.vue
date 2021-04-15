@@ -47,7 +47,7 @@ export default {
     arrButtonLinkTree: [
       {
         title: "Github",
-        path: "https://github.com/Dimas-Ngoding",
+        path: "https://github.com/dimasandhk",
         ket: "Programming stuff and side projects, old and new",
       },
       {
