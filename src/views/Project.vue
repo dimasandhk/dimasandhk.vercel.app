@@ -89,7 +89,7 @@ export default {
   },
   methods: {
     getDataRepos() {
-      return fetch("https://api.github.com/users/Dimas-Ngoding/repos")
+      return fetch("https://api.github.com/users/dimasandhk/repos")
         .then((res) => res.json())
         .then((res) => res);
     },
