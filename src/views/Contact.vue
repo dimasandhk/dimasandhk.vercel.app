@@ -62,7 +62,7 @@ export default {
       },
       {
         title: "Email",
-        path: "https://github.com/Dimas-Ngoding",
+        path: "https://github.com/dimasandhk",
         ket: "Only when essential",
       },
       {
