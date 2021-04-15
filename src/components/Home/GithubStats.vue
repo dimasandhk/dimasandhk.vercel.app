@@ -16,7 +16,7 @@
           data-aos="flip-left"
           data-aos-duration="1000"
           class="gt-stats-1 mt-3"
-          src="https://github-readme-stats.vercel.app/api?username=dimas-ngoding&show_icons=true&include_all_commits=true&count_private=true&theme=gotham"
+          src="https://github-readme-stats.vercel.app/api?username=dimasandhk&show_icons=true&include_all_commits=true&count_private=true&theme=gotham"
           alt="dimas-ngoding"
         />
       </div>
@@ -25,7 +25,7 @@
           data-aos="flip-right"
           data-aos-duration="1000"
           class="gt-stats-1 gt-2 mt-3"
-          src="https://github-readme-stats.vercel.app/api/top-langs/?username=dimas-ngoding&layout=compact&show_icons=true&theme=gotham&langs_count=10&https://github.com/dimas-ngoding/github-readme-stats"
+          src="https://github-readme-stats.vercel.app/api/top-langs/?username=dimasandhk&layout=compact&show_icons=true&theme=gotham&langs_count=10&https://github.com/dimas-ngoding/github-readme-stats"
           alt="dimas-ngoding"
         />
       </div>
