@@ -78,7 +78,7 @@ export default {
     ],
   }),
   beforeCreate() {
-    document.title = "Contact | @dimas-ngoding";
+    document.title = "Contact | @dimasandhk";
   },
   components: {
     "contact-button": ContactButton,

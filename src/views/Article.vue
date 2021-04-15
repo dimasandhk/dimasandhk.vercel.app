@@ -56,7 +56,7 @@ export default {
     showLoading: true,
   }),
   beforeCreate() {
-    document.title = "Post | @dimas-ngoding";
+    document.title = "Post | @dimasandhk";
   },
   created: async function() {
     const dataArtikel = await this.getDataArtikel();

@@ -57,7 +57,7 @@ export default {
     showLoading: true,
   }),
   beforeCreate() {
-    document.title = "Project | @dimas-ngoding";
+    document.title = "Project | @dimasandhk";
   },
   created: async function() {
     const data = await this.getDataRepos();
