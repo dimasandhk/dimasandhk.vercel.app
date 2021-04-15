@@ -1,4 +1,4 @@
-# dimas-ngoding
+# Dimas Andhika's Web Porfolio
 
 My New Portfolio Website made using Vue JS
 
