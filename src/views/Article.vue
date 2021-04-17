@@ -26,10 +26,16 @@
                   {{ title }}
                 </h4>
                 <h6 class="text-muted">{{ user }} ({{ date }})</h6>
-                <h6 class="text-muted">Tag: ({{ tag }})</h6>
-                <h6 class="text-muted">Reactions: {{ rct }} <Star /></h6>
+                <h6 class="text-muted">
+                  <span class="badge badge-dark">Tags: ({{ tag }})</span>
+                </h6>
+                <h6 class="text-muted">
+                  <span class="badge badge-dark"
+                    >Reactions: {{ rct }} <Star
+                  /></span>
+                </h6>
                 <a
-                  class="btn btn-secondary btn-block btn-sm shadow-none"
+                  class="btn btn-dark mt-3 btn-block btn-sm shadow-none"
                   :href="url"
                   target="_blank"
                 >
@@ -89,6 +95,10 @@ export default {
 
 <style lang="scss">
 .article {
+  .badge-dark {
+    background-color: #1affd6 !important;
+    color: #27272e;
+  }
   .article-box {
     .btn-block {
       font-weight: 700;

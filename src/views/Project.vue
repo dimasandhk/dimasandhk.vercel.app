@@ -20,7 +20,7 @@
         <div class="row justify-content-center mt-4">
           <div
             class="col-12 col-md-12 col-lg-6 mt-4"
-            v-for="({ name, desc, url, lang, crt, upt }, i) of arrRepos"
+            v-for="({ name, desc, url, lang, crt, upt, topics }, i) of arrRepos"
             :key="i"
             :data-aos="i % 2 == 0 ? 'fade-right' : 'fade-left'"
             data-aos-duration="1000"
@@ -30,11 +30,22 @@
                 {{ name }} <span class="lang-gt">({{ lang }})</span>
               </h4>
               <h6 class="text-muted">{{ desc }}</h6>
-              <h6 class="text-muted">Created: {{ dateParse(crt) }}</h6>
-              <h6 class="text-muted">Last Update: {{ dateParse(upt) }}</h6>
+              <hr />
+              <h6 class="text-muted">
+                <span class="badge badge-dark">Tags:</span>
+                {{ arrayTopicsParse(topics) }}
+              </h6>
+              <h6 class="text-muted">
+                <span class="badge badge-dark">Created:</span>
+                {{ dateParse(crt) }}
+              </h6>
+              <h6 class="text-muted mb-2">
+                <span class="badge badge-dark">Last Update:</span>
+                {{ dateParse(upt) }}
+              </h6>
               <a
                 :href="url"
-                class="btn btn-secondary btn-block shadow-none"
+                class="btn btn-dark btn-block shadow-none mt-3"
                 target="_blank"
                 >Visit</a
               >
@@ -55,12 +66,19 @@ export default {
     arrRepos: [],
     id: 0,
     showLoading: true,
+    apiHeader: {
+      method: "GET",
+      headers: {
+        Accept: "application/vnd.github.mercy-preview+json",
+      },
+    },
   }),
   beforeCreate() {
     document.title = "Project | @dimasandhk";
   },
   created: async function() {
     const data = await this.getDataRepos();
+    console.log(data[8]);
     data.forEach((el) => {
       this.id++;
       if (!el.language) {
@@ -72,6 +90,7 @@ export default {
           lang: "No Lang",
           crt: el.created_at,
           upt: el.updated_at,
+          topics: el.topics,
         });
       } else {
         this.arrRepos.push({
@@ -82,6 +101,7 @@ export default {
           lang: el.language,
           crt: el.created_at,
           upt: el.updated_at,
+          topics: el.topics,
         });
       }
     });
@@ -89,12 +109,33 @@ export default {
   },
   methods: {
     getDataRepos() {
-      return fetch("https://api.github.com/users/dimasandhk/repos")
+      return fetch(
+        "https://api.github.com/users/dimasandhk/repos",
+        this.apiHeader
+      )
         .then((res) => res.json())
         .then((res) => res);
     },
     dateParse(str) {
       return `${str.split("T")[0]}, ${str.split("T")[1].split("Z")[0]}`;
+    },
+    arrayTopicsParse(arr) {
+      let res = "";
+      if (arr.length > 0) {
+        arr.forEach((el, i) => {
+          if (arr.length - 1 == i) {
+            res += `${this.capitalizeString(el)}`;
+          } else {
+            res += `${this.capitalizeString(el)}, `;
+          }
+        });
+      } else {
+        res = "No Tags";
+      }
+      return res;
+    },
+    capitalizeString(str) {
+      return `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
     },
   },
   components: {
@@ -105,12 +146,22 @@ export default {
 
 <style lang="scss" scoped>
 .project {
+  hr {
+    background-color: #acacac !important;
+  }
+  .head-span {
+    color: #acacac;
+  }
   .lang-gt {
     color: #1affd6;
     font-weight: 600;
   }
   .project-box {
-    .btn-secondary {
+    .badge-dark {
+      background-color: #1affd6 !important;
+      color: #27272e;
+    }
+    .btn-dark {
       font-weight: 600;
     }
     height: 100%;
