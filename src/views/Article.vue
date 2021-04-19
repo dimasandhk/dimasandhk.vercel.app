@@ -16,7 +16,7 @@
             v-for="({ title, img, date, user, tag, url, rct }, i) of arrArtikel"
             :key="i"
             :data-aos="i % 2 == 0 ? 'fade-up-right' : 'fade-up-left'"
-            data-aos-duration="1500"
+            data-aos-duration="1000"
           >
             <div class="article-box mt-3">
               <img :src="img" class="w-100 mb-3 rounded" />
@@ -33,7 +33,7 @@
                 /></span>
               </h6>
               <a
-                class="btn btn-dark mt-3 btn-block btn-sm shadow-none"
+                class="btn btn-visit mt-3 btn-block btn-sm shadow-none"
                 :href="url"
                 target="_blank"
               >
@@ -95,7 +95,16 @@ export default {
     color: #27272e;
   }
   .article-box {
-    .btn-block {
+    .btn-visit {
+      &:hover {
+        border: 1px solid #393940;
+      }
+      &:active {
+        background-color: #393940;
+      }
+      color: #fff;
+      border: 1px solid #393940;
+      background-color: #393940;
       font-weight: 700;
     }
     box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 8px 0px;

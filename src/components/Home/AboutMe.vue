@@ -10,10 +10,10 @@
         data-aos-duration="700"
       >
         <h5>
-          I am just a 14 years old student who is interested in and has a hobby
-          in programming, currently I'm learning Vue JS and Node JS. All of my
-          repo in github are just an implementation of what I have learned so
-          far.
+          Hi! im Dimas, im a 14 years old student who is interested in and has a
+          hobby in programming, currently I'm learning Vue JS and Node JS. All
+          of my repo in github are just an implementation of what I have learned
+          so far.
         </h5>
       </div>
     </div>

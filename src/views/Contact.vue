@@ -68,7 +68,7 @@ export default {
       {
         title: "Discord",
         path: "https://discordapp.com/users/458863525516017664/",
-        ket: "Idk, i'm not so active on discord",
+        ket: "Idk why i put this, i'm not so active on discord",
       },
       {
         title: "Dev.to",
@@ -96,7 +96,7 @@ export default {
   }
   .github-link {
     &:hover {
-      box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 8px 0px;
+      box-shadow: rgba(0, 0, 0, 0) 0px 4px 8px 0px;
       color: #fff !important;
     }
     &:active {

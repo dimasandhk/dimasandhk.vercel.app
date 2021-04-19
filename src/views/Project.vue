@@ -45,7 +45,7 @@
               </h6>
               <a
                 :href="url"
-                class="btn btn-dark btn-block shadow-none mt-3"
+                class="btn btn-visit btn-block shadow-none mt-3"
                 target="_blank"
                 >Visit</a
               >
@@ -147,7 +147,7 @@ export default {
 <style lang="scss" scoped>
 .project {
   hr {
-    background-color: #acacac !important;
+    background-color: #616166 !important;
   }
   .head-span {
     color: #acacac;
@@ -161,8 +161,17 @@ export default {
       background-color: #1affd6 !important;
       color: #27272e;
     }
-    .btn-dark {
-      font-weight: 600;
+    .btn-visit {
+      &:hover {
+        border: 1px solid #393940;
+      }
+      &:active {
+        background-color: #393940;
+      }
+      color: #fff;
+      border: 1px solid #393940;
+      background-color: #393940;
+      font-weight: 700;
     }
     box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 8px 0px;
     height: 100%;

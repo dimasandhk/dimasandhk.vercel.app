@@ -54,6 +54,7 @@ export default {
   color: #fff !important;
 }
 .navbar {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 8px 0px;
   border-bottom: 1px solid #35353d;
   .navbar-brand {
     font-weight: 600;

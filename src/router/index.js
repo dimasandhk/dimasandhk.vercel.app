@@ -25,6 +25,14 @@ const routes = [
     name: "Project",
     component: Project,
   },
+  {
+    path: "/link",
+    redirect: "/contact",
+  },
+  {
+    path: "/:catchAll(.*)",
+    redirect: "/",
+  },
 ];
 
 const router = createRouter({
