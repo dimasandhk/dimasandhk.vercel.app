@@ -3,7 +3,7 @@
     <a
       target="_blank"
       :href="path"
-      class="btn text-light github-link btn-lg btn-block shadow-none mt-3"
+      class="btn text-light github-link btn-lg btn-block mt-3"
     >
       <slot name="button"></slot>
     </a>

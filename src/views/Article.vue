@@ -10,41 +10,38 @@
           Dev.to Post
         </h1>
         <Loading v-show="showLoading == true" />
-        <container-article>
-          <div class="row justify-content-center">
-            <div
-              class="col-12 col-md-12 col-lg-6"
-              v-for="({ title, img, date, user, tag, url, rct },
-              i) of arrArtikel"
-              :key="i"
-              :data-aos="i % 2 == 0 ? 'fade-up-right' : 'fade-up-left'"
-              data-aos-duration="1500"
-            >
-              <div class="article-box mt-3">
-                <img :src="img" class="w-100 mb-3 rounded" />
-                <h4>
-                  {{ title }}
-                </h4>
-                <h6 class="text-muted">{{ user }} ({{ date }})</h6>
-                <h6 class="text-muted">
-                  <span class="badge badge-dark">Tags: ({{ tag }})</span>
-                </h6>
-                <h6 class="text-muted">
-                  <span class="badge badge-dark"
-                    >Reactions: {{ rct }} <Star
-                  /></span>
-                </h6>
-                <a
-                  class="btn btn-dark mt-3 btn-block btn-sm shadow-none"
-                  :href="url"
-                  target="_blank"
-                >
-                  Visit
-                </a>
-              </div>
+        <div class="row justify-content-center">
+          <div
+            class="col-12 col-md-12 col-lg-6"
+            v-for="({ title, img, date, user, tag, url, rct }, i) of arrArtikel"
+            :key="i"
+            :data-aos="i % 2 == 0 ? 'fade-up-right' : 'fade-up-left'"
+            data-aos-duration="1500"
+          >
+            <div class="article-box mt-3">
+              <img :src="img" class="w-100 mb-3 rounded" />
+              <h4>
+                {{ title }}
+              </h4>
+              <h6 class="text-muted">{{ user }} ({{ date }})</h6>
+              <h6 class="text-muted">
+                <span class="badge badge-dark">Tags: ({{ tag }})</span>
+              </h6>
+              <h6 class="text-muted">
+                <span class="badge badge-dark"
+                  >Reactions: {{ rct }} <Star
+                /></span>
+              </h6>
+              <a
+                class="btn btn-dark mt-3 btn-block btn-sm shadow-none"
+                :href="url"
+                target="_blank"
+              >
+                Visit
+              </a>
             </div>
           </div>
-        </container-article>
+        </div>
       </div>
     </div>
     <Footer />
@@ -53,7 +50,6 @@
 
 <script>
 import Star from "../components/Svg/Star.vue";
-import CtProject from "../components/Home/CtProject.vue";
 
 export default {
   data: () => ({
@@ -87,7 +83,6 @@ export default {
     },
   },
   components: {
-    "container-article": CtProject,
     Star,
   },
 };
@@ -103,6 +98,7 @@ export default {
     .btn-block {
       font-weight: 700;
     }
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 8px 0px;
     background-color: #27272e;
     padding: 10px 15px;
     border: 1px solid #27272e;

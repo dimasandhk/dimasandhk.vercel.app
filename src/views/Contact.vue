@@ -62,7 +62,7 @@ export default {
       },
       {
         title: "Email",
-        path: "https://github.com/dimasandhk",
+        path: "mailto:dimasandhikadiputra@gmail.com",
         ket: "Only when essential",
       },
       {
@@ -95,11 +95,19 @@ export default {
     font-weight: 600;
   }
   .github-link {
-    font-weight: 600;
     &:hover {
-      background-color: #1b1f23;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 8px 0px;
+      color: #fff !important;
     }
-    background-color: #1b1f23;
+    &:active {
+      box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 8px 0px;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+    font-weight: 600;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 8px 0px;
+    background-color: #27272e;
   }
   .instagram-link {
     font-weight: 600;

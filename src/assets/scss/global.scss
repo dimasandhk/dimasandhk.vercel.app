@@ -3,6 +3,27 @@
 $main: #16161d;
 $secondary: #1affd6;
 
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+  border-radius: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #393940;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #616166;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #76757a;
+}
+
 html,
 body {
   max-width: 100%;

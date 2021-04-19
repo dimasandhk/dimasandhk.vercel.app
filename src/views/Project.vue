@@ -164,6 +164,7 @@ export default {
     .btn-dark {
       font-weight: 600;
     }
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 8px 0px;
     height: 100%;
     background-color: #27272e;
     padding: 10px 15px;
