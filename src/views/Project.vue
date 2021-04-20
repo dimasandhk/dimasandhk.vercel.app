@@ -78,7 +78,6 @@ export default {
   },
   created: async function() {
     const data = await this.getDataRepos();
-    console.log(data[8]);
     data.forEach((el) => {
       this.id++;
       if (!el.language) {

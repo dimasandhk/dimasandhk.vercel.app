@@ -3,6 +3,7 @@ import Home from "../views/Home.vue";
 import Article from "../views/Article.vue";
 import Contact from "../views/Contact.vue";
 import Project from "../views/Project.vue";
+import Linktree from "@/components/Contact/Linktree.vue";
 
 const routes = [
   {
@@ -26,8 +27,13 @@ const routes = [
     component: Project,
   },
   {
+    path: "/linktree",
+    name: "Link Tree",
+    component: Linktree,
+  },
+  {
     path: "/link",
-    redirect: "/contact",
+    redirect: "/linktree",
   },
   {
     path: "/:catchAll(.*)",
