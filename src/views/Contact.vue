@@ -75,7 +75,9 @@ import swal from "sweetalert";
 
 export default {
   data: () => ({
-    scriptURL: process.env.VUE_APP_GSHEET,
+    scriptURL: atob(
+      "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J5QzZwNS05M3VsZXNFVThFTUUtWExoX3dIcWdJdFNCdjNwWlhwNEttYm5sSmFnSWNXdXZyRXV2bXpqdTlHdHhDRGkyQS9leGVj"
+    ),
     showLoading: false,
   }),
   beforeCreate() {
