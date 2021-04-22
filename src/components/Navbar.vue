@@ -5,32 +5,13 @@
       <toggle-button></toggle-button>
       <navbar-collapse>
         <router-link
-          to="/"
+          :to="path"
+          v-for="({ title, path }, i) of list"
+          :key="i"
           data-toggle="collapse"
           data-target=".navbar-collapse.show"
           class="nav-link"
-          >Home</router-link
-        >
-        <router-link
-          data-toggle="collapse"
-          data-target=".navbar-collapse.show"
-          class="nav-link"
-          to="/article"
-          >Article</router-link
-        >
-        <router-link
-          data-toggle="collapse"
-          data-target=".navbar-collapse.show"
-          class="nav-link"
-          to="/contact"
-          >Contact</router-link
-        >
-        <router-link
-          data-toggle="collapse"
-          data-target=".navbar-collapse.show"
-          class="nav-link"
-          to="/project"
-          >Project</router-link
+          >{{ title }}</router-link
         >
       </navbar-collapse>
     </div>
@@ -42,6 +23,32 @@ import ToggleButton from "./Navbar/ToggleButton.vue";
 import Container from "./Navbar/Container.vue";
 
 export default {
+  data() {
+    return {
+      list: [
+        {
+          title: "Home",
+          path: "/",
+        },
+        {
+          title: "Timeline",
+          path: "/timeline",
+        },
+        {
+          title: "Project",
+          path: "/project",
+        },
+        {
+          title: "Contact",
+          path: "/contact",
+        },
+        {
+          title: "Article",
+          path: "/article",
+        },
+      ],
+    };
+  },
   components: {
     "toggle-button": ToggleButton,
     "navbar-collapse": Container,
