@@ -9,14 +9,13 @@
     "vue-ui": "vue ui"
   },
   "dependencies": {
-    "@sweetalert2/theme-dark": "^4.0.5",
     "aos": "^2.3.4",
     "bootstrap": "^4.6.0",
     "core-js": "^3.6.5",
+    "dotenv": "^9.0.1",
     "jquery": "^3.6.0",
     "popper.js": "^1.16.1",
     "sweetalert": "^2.1.2",
-    "sweetalert2": "^10.16.7",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0"
   },

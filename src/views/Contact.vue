@@ -67,16 +67,18 @@
 </template>
 
 <script>
+// Components
 import Button from "../components/Contact/FormButton.vue";
 import CtContact from "../components/Contact/CtContact.vue";
 import Box from "../components/Contact/BoxContact.vue";
 import Loading from "../components/Contact/ButtonLoading.vue";
+
+// Modules / library
 import swal from "sweetalert";
 
 export default {
   data: () => ({
-    scriptURL:
-      "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J5QzZwNS05M3VsZXNFVThFTUUtWExoX3dIcWdJdFNCdjNwWlhwNEttYm5sSmFnSWNXdXZyRXV2bXpqdTlHdHhDRGkyQS9leGVj",
+    scriptURL: undefined,
     showLoading: false,
   }),
   beforeCreate() {
@@ -125,6 +127,9 @@ export default {
     Box,
     "form-button": Button,
     Loading,
+  },
+  created() {
+    this.scriptURL = process.env.VUE_APP_GSHEET;
   },
 };
 </script>
