@@ -50,18 +50,21 @@
 
 <script>
 import Star from "../components/Svg/Star.vue";
+import NProgress from "nprogress";
 
 export default {
   data: () => ({
     scriptURL: "https://dev.to/api/articles?username=dimasngoding",
     arrArtikel: [],
-    showLoading: true,
+    showLoading: true
   }),
   beforeCreate() {
     document.title = "Post | @dimasandhk";
   },
   created: async function() {
+    NProgress.set(0.0);
     const dataArtikel = await this.getDataArtikel();
+    NProgress.set(0.4);
     dataArtikel.forEach((el) => {
       this.arrArtikel.push({
         title: el.title,
@@ -70,21 +73,23 @@ export default {
         user: el.user.name,
         tag: el.tags,
         url: el.url,
-        rct: el.public_reactions_count,
+        rct: el.public_reactions_count
       });
     });
+    NProgress.set(0.7);
     this.showLoading = false;
+    NProgress.set(1.0);
   },
   methods: {
     getDataArtikel: function() {
       return fetch(this.scriptURL)
         .then((res) => res.json())
         .then((res) => res);
-    },
+    }
   },
   components: {
-    Star,
-  },
+    Star
+  }
 };
 </script>
 

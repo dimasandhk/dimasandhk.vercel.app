@@ -60,6 +60,7 @@
 
 <script>
 import CtProject from "../components/Home/CtProject.vue";
+import NProgress from "nprogress";
 
 export default {
   data: () => ({
@@ -69,15 +70,17 @@ export default {
     apiHeader: {
       method: "GET",
       headers: {
-        Accept: "application/vnd.github.mercy-preview+json",
-      },
-    },
+        Accept: "application/vnd.github.mercy-preview+json"
+      }
+    }
   }),
   beforeCreate() {
     document.title = "Project | @dimasandhk";
   },
   created: async function() {
+    NProgress.set(0.0);
     const data = await this.getDataRepos();
+    NProgress.set(0.4);
     data.forEach((el) => {
       this.id++;
       if (!el.language) {
@@ -89,7 +92,7 @@ export default {
           lang: "No Lang",
           crt: el.created_at,
           upt: el.updated_at,
-          topics: el.topics,
+          topics: el.topics
         });
       } else {
         this.arrRepos.push({
@@ -100,11 +103,13 @@ export default {
           lang: el.language,
           crt: el.created_at,
           upt: el.updated_at,
-          topics: el.topics,
+          topics: el.topics
         });
       }
     });
+    NProgress.set(0.7);
     this.showLoading = false;
+    NProgress.set(1.0);
   },
   methods: {
     getDataRepos() {
@@ -135,11 +140,11 @@ export default {
     },
     capitalizeString(str) {
       return `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
-    },
+    }
   },
   components: {
-    "container-project": CtProject,
-  },
+    "container-project": CtProject
+  }
 };
 </script>
 
