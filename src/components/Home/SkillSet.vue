@@ -29,31 +29,31 @@ export default {
   data: () => ({
     arrSkill: [
       {
-        title: "HTML and CSS",
-        ket: "Bootstrap (4+), SCSS, Vuetify",
+        title: "Basic Skill",
+        ket: "HTML, CSS, SCSS, Javascript"
       },
       {
-        title: "Javascript",
-        ket: "ES5, ES6, Jquery",
+        title: "Frontend Framework",
+        ket: "Vue JS, Bootstrap, Tailwind, Vuetify"
       },
       {
-        title: "Javascript Framework",
-        ket: "Vue JS, Nuxt JS (Learning)",
+        title: "Frontend Library",
+        ket: "ReactJS (Learning), Jquery, GSAP"
       },
       {
-        title: "Server Side",
-        ket: "Node JS (Learning), Express (Learning)",
+        title: "Backend Skill",
+        ket: "Node JS, Express, Hapi"
       },
       {
-        title: "Others",
-        ket: "Git (Basic Command Line)",
+        title: "Database",
+        ket: "Mongodb, Mongoose (Learning)"
       },
       {
         title: "Tools",
-        ket: "Figma, Photoshop",
-      },
-    ],
-  }),
+        ket: "GIT Basic CL, Figma, Photoshop"
+      }
+    ]
+  })
 };
 </script>
 

@@ -1,18 +1,10 @@
 <template>
   <div class="experience mt-5">
     <div class="container mb-5">
-      <h1
-        class="judul text-center"
-        data-aos="fade-down"
-        data-aos-duration="700"
-      >
+      <h1 class="judul text-center" data-aos="fade-down" data-aos-duration="700">
         Timeline
       </h1>
-      <h5
-        class="text-muted text-center"
-        data-aos="fade-down"
-        data-aos-duration="700"
-      >
+      <h5 class="text-muted text-center" data-aos="fade-down" data-aos-duration="700">
         My Experience starting from 2020 until now
       </h5>
       <div class="row justify-content-center mt-4">
@@ -29,11 +21,7 @@
           </select>
         </div>
       </div>
-      <div
-        class="row justify-content-center"
-        data-aos="fade-up"
-        data-aos-duration="700"
-      >
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-duration="700">
         <div class="col-12 col-md-12 col-lg-6 mt-4">
           <div v-if="selectedYear == '2020'">
             <h3 class="judul">2020</h3>
@@ -69,44 +57,56 @@ export default {
       arr2020: [
         {
           title: "My first time learning programming",
-          date: "28 June",
+          date: "28 June"
         },
         {
           title: "Bootstrap 4, Basic CSS",
-          date: "5 August",
+          date: "5 August"
         },
         {
           title: "Flexbox, CSS Grid, etc",
-          date: "21 August",
+          date: "21 August"
         },
         {
           title: "Basic Javascript (Variable, Condition, Looping, etc)",
-          date: "2 Nov",
+          date: "2 Nov"
         },
         {
           title: "Javascript DOM",
-          date: "15 Nov",
-        },
+          date: "15 Nov"
+        }
       ],
       arr2021: [
         {
           title: "HTTP Request Jquery",
-          date: "18 Jan",
+          date: "18 Jan"
         },
         {
           title: "Javascript Framework (Vue JS)",
-          date: "6 Mar",
+          date: "6 Mar"
         },
         {
           title: "Promises, Async, Await",
-          date: "31 Mar",
+          date: "31 Mar"
         },
         {
-          title: "Node JS (Learning)",
-          date: "15 Apr",
+          title: "Node JS",
+          date: "15 Apr"
         },
+        {
+          title: "Express",
+          date: "17 May"
+        },
+        {
+          title: "MongoDB",
+          date: "25 May"
+        },
+        {
+          title: "Mongoose + React JS (Learning)",
+          date: "30 May"
+        }
       ],
-      selectedYear: "2020",
+      selectedYear: "2020"
     };
   },
   beforeCreate() {
@@ -116,8 +116,8 @@ export default {
     changeSection() {
       const selectBox = document.querySelector(".select-year");
       this.selectedYear = selectBox.options[selectBox.selectedIndex].text;
-    },
-  },
+    }
+  }
 };
 </script>
 
