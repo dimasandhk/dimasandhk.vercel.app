@@ -1,4 +1,4 @@
-# Dimas Andhika's Web Porfolio
+# Dimas Andhika's Personal Website
 
 My New Personal Website made using Vue JS
 
