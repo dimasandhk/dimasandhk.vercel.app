@@ -59,19 +59,9 @@ export default {
 		NProgress.start();
 
 		const dataArtikel = await ApiService.getArticle();
-		dataArtikel.forEach((el) => {
-			this.arrArtikel.push({
-				title: el.title,
-				img: el.social_image,
-				date: el.readable_publish_date,
-				user: el.user.name,
-				tag: el.tags,
-				url: el.url,
-				rct: el.public_reactions_count
-			});
-		});
-		this.showLoading = false;
+		this.arrArtikel = [...dataArtikel];
 
+		this.showLoading = false;
 		NProgress.done();
 	},
 	components: {

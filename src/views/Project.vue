@@ -55,7 +55,6 @@ import ApiService from "../utils/ApiService";
 export default {
 	data: () => ({
 		arrRepos: [],
-		id: 0,
 		showLoading: true
 	}),
 	beforeCreate() {
@@ -65,32 +64,7 @@ export default {
 		NProgress.start();
 
 		const data = await ApiService.getRepos();
-		data.forEach((el) => {
-			this.id++;
-			if (!el.language) {
-				this.arrRepos.push({
-					id: this.id,
-					name: el.name,
-					desc: el.description,
-					url: el.html_url,
-					lang: "No Lang",
-					crt: el.created_at,
-					upt: el.updated_at,
-					topics: el.topics
-				});
-			} else {
-				this.arrRepos.push({
-					id: this.id,
-					name: el.name,
-					desc: el.description,
-					url: el.html_url,
-					lang: el.language,
-					crt: el.created_at,
-					upt: el.updated_at,
-					topics: el.topics
-				});
-			}
-		});
+		this.arrRepos = [...data];
 
 		this.showLoading = false;
 		NProgress.done();
