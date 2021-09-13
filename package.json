@@ -11,7 +11,7 @@
 	"dependencies": {
 		"aos": "^2.3.4",
 		"bootstrap": "^4.6.0",
-		"core-js": "^3.6.5",
+		"core-js": "^3.17.3",
 		"dotenv": "^9.0.1",
 		"jquery": "^3.6.0",
 		"nprogress": "^0.2.0",
