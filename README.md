@@ -1,4 +1,4 @@
-# Dimas Andhika's Personal Website
+# Dimas Andhika's Personal Website **(Not Active)**
 
 My New Personal Website made using Vue JS
 
